@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.5'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+ext {
+    h2Version = '2.3.232'
+    springBooVersion = "3.3.5"
+    lombokVersion = "1.18.30"
+    mailVersion = "1.4.7"
+    logbackVersion = "1.5.11"
+    swaggerVersion = "2.6.0"
+    mockitoVersion = "5.14.0"
+    assertjVersion = "3.26.0"
+    junitVersion = "5.11.0"
+    dumbsterVersion = "1.6"
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Spring
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBooVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBooVersion}"
+
+    // Database
+    testImplementation "com.h2database:h2:${h2Version}"
+
+    // Mail
+    implementation "javax.mail:mail:${mailVersion}"
+
+    // Tools
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    //implementation "io.springfox:springfox-swagger2:${swaggerVersion}"
+    //implementation "io.springfox:springfox-swagger-ui:${swaggerVersion}"
+
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${swaggerVersion}"
+
+    // Annotations
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    // Tests
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBooVersion}"
+    testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+    testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+    testImplementation "org.assertj:assertj-core:${assertjVersion}"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
+    testImplementation "dumbster:dumbster:${dumbsterVersion}"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
