@@ -19,7 +19,7 @@ public class HappyTownController {
     private final HappyTownService happyTownService;
 
     private static final String SMPTP_HOST = "localhost";
-    private static final int SMPTP_PORT =  2525;
+    private static final int SMPTP_PORT =  25;
 
     public HappyTownController(HappyTownService happyTownService) {
         this.happyTownService = happyTownService;

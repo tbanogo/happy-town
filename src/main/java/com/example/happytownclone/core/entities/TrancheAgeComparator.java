@@ -1,6 +1,4 @@
-package com.example.happytownclone.service;
-
-import com.example.happytownclone.domain.TrancheAge;
+package com.example.happytownclone.core.entities;
 
 import java.util.Comparator;
 
@@ -12,4 +10,5 @@ public class TrancheAgeComparator implements Comparator<TrancheAge> {
         Integer sumAnneesTranche2 = o2.getAgeMin() + o2.getAgeMax();
         return sumAnneesTranche1.compareTo(sumAnneesTranche2);
     }
+
 }

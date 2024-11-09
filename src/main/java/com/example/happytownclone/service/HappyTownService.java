@@ -107,7 +107,7 @@ public class HappyTownService {
     }
 
     private void envoiMessageSyntheseCadeauxJournee(String smtpHost, int smtpPort, List<Habitant> habitantsAttributionCadeaux, LocalDate dateCourante) throws MessagingException {
-        if (habitantsAttributionCadeaux.isEmpty()) {
+        if (!habitantsAttributionCadeaux.isEmpty()) {
             String subject = String.format("%1$td/%1$tm/%1$tY", dateCourante) + " - Synthèse des cadeaux pour envoi";
             String beneficiaire = "mairie+service-cadeau@happytown.com";
             String body = "Bonjour,";

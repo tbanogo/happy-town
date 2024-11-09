@@ -1,7 +1,6 @@
 package com.example.happytownclone.controller;
 
 import com.example.happytownclone.domain.Habitant;
-import com.example.happytownclone.service.HabitantService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.web.bind.annotation.GetMapping;
