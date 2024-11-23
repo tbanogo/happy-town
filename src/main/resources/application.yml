@@ -10,7 +10,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        show_sql: true
+        show_sql: false
         use_sql_comments: true
         format_sql: true
     defer-datasource-initialization: true
@@ -23,6 +23,31 @@ spring:
         trace: false
         web-allow-others: false
 
+mail:
+  smtp:
+    host: 172.24.0.3
+    port: 25
+    from: mairie@happytown.com
+
+file:
+  cadeauxByTrancheAge:
+    path: src/main/resources/cadeaux.txt
+
 happytown:
   openapi:
-    url: http://localhost:8080
+    url: "http://localhost:8080"
+    server:
+      url: "http://localhost:8080"
+      description: "Happy Town Clone API"
+    contact:
+      email: "theophile.banogo@gmail.com"
+      name: "Serge BANOGO"
+      url: "https://happytownclone.com/"
+    licence:
+      url: "MIT"
+    info:
+      title: "Happy Town Clone"
+      version: "1.0"
+      description: "This API exposes endpoints to manage tutorials"
+      termsOfService: "https:://happytownclone.com/terms"
+

@@ -1,0 +1,8 @@
+Bonjour,
+<br><br>
+Voici la liste récapitulative des cadeaux du jour :
+<ul>
+    #cadeaux
+</ul>
+<br>
+Merci!

@@ -1,4 +1,4 @@
-package com.example.happytownclone.configuration;
+package com.example.happytownclone.entrypoints.rest;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
-public class OpenAPIConfig {
+public class HabitantApiSwaggerConfig {
 
     @Value("${happytown.openapi.url}")
     private String url;

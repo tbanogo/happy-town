@@ -24,6 +24,11 @@ public class Habitant {
         this.adressePostale = adressePostalr;
     }
 
+    public boolean hasCadeau() {
+        return cadeauOffert != null &&
+                dateAttributionCadeau != null;
+    }
+
     public void attribuerCadeau(String cadeauOffert, LocalDate dateAttributionCadeau) {
         this.cadeauOffert = cadeauOffert;
         this.dateAttributionCadeau = dateAttributionCadeau;

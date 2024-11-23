@@ -1,6 +1,6 @@
 package com.example.happytownclone.core.use_cases;
 
-import com.example.happytownclone.domain.Habitant;
+import com.example.happytownclone.core.entities.Habitant;
 
 import java.time.LocalDate;
 import java.util.List;

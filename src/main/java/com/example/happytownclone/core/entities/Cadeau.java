@@ -20,7 +20,7 @@ public class Cadeau {
     public String getDetail() {
         return this.description + " " +
                 "(Montant : " + this.montant + "$ - " +
-                "Référence : " + this.trancheAge + ")";
+                "Référence : " + this.reference + ")";
     }
 
     @Override
